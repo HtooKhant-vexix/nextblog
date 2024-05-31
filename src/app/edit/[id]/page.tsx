@@ -29,6 +29,7 @@ const EditPostPage: FC<EditPostProps> = ({ params }) => {
 
   console.log(dataPost);
   const handleEditPost: SubmitHandler<FormInputPost> = (data) => {
+    console.log("hhlhlhs")
     updatePost(data);
   };
 
@@ -40,6 +41,7 @@ const EditPostPage: FC<EditPostProps> = ({ params }) => {
       console.error(error);
     },
     onSuccess: () => {
+      console.log("hello");
       router.push("/");
       router.refresh();
     },

@@ -10,17 +10,17 @@ import { useForm, SubmitHandler } from "react-hook-form";
 interface formValue {
   submit: SubmitHandler<FormInputPost>;
   isEditing: boolean;
-  initialValue?: FormInputPost
+  initialValue?: FormInputPost;
 }
 
-const FormPost: FC<formValue> = ({ submit, isEditing,initialValue }) => {
+const FormPost: FC<formValue> = ({ submit, isEditing, initialValue }) => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm<FormInputPost>({
-    defaultValues: initialValue
+    defaultValues: initialValue,
   });
 
   const { data: dataTags, isLoading: isLoadingTags } = useQuery<Tag[]>({
