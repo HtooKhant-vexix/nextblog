@@ -29,7 +29,7 @@ const EditPostPage: FC<EditPostProps> = ({ params }) => {
 
   console.log(dataPost);
   const handleEditPost: SubmitHandler<FormInputPost> = (data) => {
-    console.log("hhlhlhs")
+    console.log("hhlhlhs");
     updatePost(data);
   };
 
